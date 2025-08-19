@@ -29,3 +29,7 @@ machine_schema = {
       },
       "required": ["name", "os", "cpu", "ram"]
 }
+
+def save_config(machines):
+    with open('configs/instances.json', 'w') as f:
+        json.dump(machines, f, indent=4)
