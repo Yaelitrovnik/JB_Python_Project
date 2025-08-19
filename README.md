@@ -1,0 +1,150 @@
+# Virtual Machine Infrastructure Simulator
+
+A Python-based infrastructure simulator that allows you to create and manage virtual machine configurations with automated nginx installation simulation.
+
+---
+
+## Features
+
+- 🖥️ **Virtual Machine Creation**: Create virtual machines with customizable CPU, RAM, and OS specifications.  
+- 📝 **Configuration Management**: Persistent storage of VM configurations in JSON format (`configs/instances.json`).  
+- 🔧 **Automated nginx Installation**: Simulate nginx installation on all created VM instances using a Bash script.  
+- 📋 **Input Validation**: Robust validation using `jsonschema` to ensure correct VM data.  
+- 📊 **Comprehensive Logging**: Detailed logging of all events and errors in `logs/provisioning.log`.  
+- 🛡️ **Error Handling**: Graceful error handling with user-friendly messages.
+
+---
+
+## Project Structure
+
+```
+
+JB_Python_Project/
+├── configs/
+│   └── instances.json          # VM configurations storage
+├── logs/
+│   └── provisioning.log        # Application logs
+├── scripts/
+│   └── install\_nginx.sh        # nginx installation script
+├── src/
+│   ├── machine.py              # Machine class definition
+│   ├── input\_handler.py        # Handles user input and saves configurations
+│   └── service\_installer.py    # Python wrapper to run the Bash installation script
+├── infra\_simulator.py          # Main simulator entry point
+└── requirements.txt            # Python dependencies
+
+````
+
+---
+
+## Requirements
+
+- Python 3.9+  
+- Bash shell (for nginx installation script)  
+- `jsonschema>=4.0.0` (installable via `pip install -r requirements.txt`)
+
+---
+
+## Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone <repository-url>
+cd infra-automation
+````
+
+2. **Create and activate a virtual environment:**
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux/macOS
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+### Running the Simulator
+
+Run the main simulator script:
+
+```bash
+python infra_simulator.py
+```
+
+### Interactive Workflow
+
+1. **Create Virtual Machines:**
+
+   * Enter VM name, OS (`Ubuntu` or `CentOS`), CPU (e.g., `2vCPU`), and RAM (e.g., `4GB`).
+   * Type `done` to finish creating machines.
+
+2. **Configuration Management:**
+
+   * Machine configurations are saved automatically to `configs/instances.json`.
+
+3. **Simulated nginx Installation:**
+
+   * The Bash script `scripts/install_nginx.sh` simulates installing nginx on all created machines.
+   * All installation events are logged in `logs/provisioning.log`.
+
+---
+
+## Logging
+
+All key events, successes, and errors are logged in:
+
+```
+logs/provisioning.log
+```
+
+Example log entries:
+
+```
+2025-08-19 15:00:00 - INFO - Added machine: web01 (Ubuntu, 2vCPU, 4GB)
+2025-08-19 15:00:01 - INFO - Saved 1 machines to configs/instances.json
+2025-08-19 15:00:02 - INFO - Installation successful on 'web01'.
+```
+
+---
+
+## Error Handling
+
+* **Validation Errors**: Invalid VM specifications (wrong OS, CPU, or RAM format).
+* **File System Errors**: Missing or unreadable configuration/log folders.
+* **Process Execution**: Errors during the simulated nginx installation.
+
+All errors are logged with `logging.error()` in `logs/provisioning.log`.
+
+---
+
+## Dependencies
+
+* **Python 3.9+**
+* **jsonschema>=4.0.0**
+
+No other external packages are required. Logging is built-in Python library.
+
+---
+
+## Project Notes
+
+* The `install_nginx.sh` script is a **simulation**; no actual VMs or services are created.
+* The simulator is **modular**: you can extend `Machine` or the input handler for additional functionality.
+* Logs and configurations are stored persistently for review or reuse.
+
+---
+
+**Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
