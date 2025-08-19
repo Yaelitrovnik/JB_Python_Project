@@ -30,9 +30,9 @@ def main():
         save_config([m.to_dict() for m in machine_objects])
         logging.info("Saved machine configurations to configs/instances.json")
 
-        # Install services
-        install_service()
-        logging.info("Service installation completed")
+        # Install services for each machine
+        for m in machine_objects:
+            install_service(m.name)
 
     except Exception as e:
         logging.error(f"An error occurred during provisioning: {e}")
