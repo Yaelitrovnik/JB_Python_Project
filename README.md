@@ -51,7 +51,7 @@ JB_Python_Project/
 
 ```bash
 git clone <repository-url>
-cd infra-automation
+cd JB_Python_Project
 ````
 
 2. **Create and activate a virtual environment:**
@@ -148,3 +148,4 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
