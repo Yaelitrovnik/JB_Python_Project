@@ -81,7 +81,7 @@ pip install -r requirements.txt
 Run the main simulator script:
 
 ```bash
-python infra_simulator.py
+python infra_simulation.py
 ```
 
 ### Interactive Workflow
@@ -148,6 +148,7 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
 
