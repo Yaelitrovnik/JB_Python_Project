@@ -20,18 +20,19 @@ A Python-based infrastructure simulator that allows you to create and manage vir
 ```
 
 JB_Python_Project/
-├── configs/
-│   └── instances.json          # VM configurations storage
-├── logs/
-│   └── provisioning.log        # Application logs
-├── scripts/
-│   └── install\_nginx.sh        # nginx installation script
-├── src/
-│   ├── machine.py              # Machine class definition
-│   ├── input\_handler.py        # Handles user input and saves configurations
-│   └── service\_installer.py    # Python wrapper to run the Bash installation script
-├── infra\_simulator.py          # Main simulator entry point
-└── requirements.txt            # Python dependencies
+│── infra_simulation.py
+│── vm_config.json              # auto-created after run
+│── logs/
+│   └── provisioning.log        # auto-created after run
+│── configs/
+│   └── vm_config.json          # saved configs
+│── scripts/
+│   └── install_nginx.sh
+└── src/
+    ├── input_handler.py
+    ├── config_manager.py
+    ├── service_installer.py
+    └── machine.py
 
 ````
 
@@ -148,4 +149,5 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
