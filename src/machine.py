@@ -6,8 +6,7 @@ class Machine:
           self.os = os
           self.cpu = cpu
           self.ram = ram
-          self.logger = logging.getLogger(__name__)
-          self.logger.setLevel(logging.INFO)
+          
 
     def to_dict(self):
           return {"name": self.name, "os": self.os, "cpu": self.cpu, "ram": self.ram}
