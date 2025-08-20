@@ -1,0 +1,14 @@
+[
+    {
+        "name": "MyVm",
+        "os": "Linux",
+        "cpu": "2.0",
+        "ram": "4.0"
+    },
+    {
+        "name": "MyVm2",
+        "os": "Windows",
+        "cpu": "2.2",
+        "ram": "4.4"
+    }
+]
