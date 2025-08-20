@@ -25,12 +25,11 @@ JB_Python_Project/
 │── logs/
 │   └── provisioning.log        # auto-created after run
 │── configs/
-│   └── vm_config.json          # saved configs
+│   └── instance.json           # saved configs
 │── scripts/
 │   └── install_nginx.sh
 └── src/
     ├── input_handler.py
-    ├── config_manager.py
     ├── service_installer.py
     └── machine.py
 
@@ -149,5 +148,6 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
