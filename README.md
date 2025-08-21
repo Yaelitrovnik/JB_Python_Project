@@ -60,7 +60,7 @@ The following are required depending on your operating system:
 1. **Clone the repository:**
 
 ```bash
-git clone <repository-url>
+git clone github.com/Yaelitrovnik/JB_Python_Project
 cd JB_Python_Project
 ````
 
@@ -158,6 +158,7 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
 
