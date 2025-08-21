@@ -1,8 +1,10 @@
 import subprocess
 import logging
 import platform
+import sys
+from pathlib import Path
 
-# Make sure logging is configured
+# Configure logging
 logging.basicConfig(
     filename='logs/provisioning.log',
     level=logging.INFO,
@@ -11,11 +13,16 @@ logging.basicConfig(
 
 def install_service(vm_name):
     try:
-        #subprocess.run(['wsl', 'bash', 'scripts/install_nginx.sh', vm_name], check=True)
         if platform.system() == "Windows":
-            cmd = ["wsl", "bash", "scripts/install_nginx.sh", vm_name]    
+            # Run inside Ubuntu WSL
+            cmd = ["wsl", "-d", "Ubuntu", "bash", "scripts/install_nginx.sh", vm_name]
         else:
+            # Linux/macOS
             cmd = ["bash", "scripts/install_nginx.sh", vm_name]
-        logging.info("Service installation completed successfully on {vm_name} .")
+
+        subprocess.run(cmd, check=True)
+        logging.info(f"Service installation completed successfully on {vm_name}.")
+    
     except subprocess.CalledProcessError as e:
         logging.error(f"Error occurred during service installation on {vm_name}: {e}")
+
