@@ -39,9 +39,19 @@ JB_Python_Project/
 
 ## Requirements
 
-- Python 3.9+  
-- Bash shell (for nginx installation script)  
-- `jsonschema>=4.0.0` (installable via `pip install -r requirements.txt`)
+### Python Dependencies
+- Python 3.9+
+- `jsonschema>=4.0.0` (install via `pip install -r requirements.txt`)
+
+### System-Level Requirements
+The following are required depending on your operating system:
+
+| Operating System | Requirement                                      |
+|------------------|--------------------------------------------------|
+| Linux / macOS    | Bash shell (typically pre-installed)             |
+| Windows          | One of the following Bash environments:          |
+|                  | • **Git Bash** (recommended)                     |
+|                  | • **WSL with Ubuntu** (run `wsl --install -d Ubuntu`) |
 
 ---
 
@@ -148,6 +158,7 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
 
