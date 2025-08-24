@@ -39,6 +39,13 @@ JB_Python_Project/
 
 ## Requirements
 
+## Windows:
+  - WSL installed
+  - Ubuntu distribution installed in WSL
+
+## Linux/macOS:
+  - bash shell available
+
 ### Python Dependencies
 - Python 3.13.5
 - jsonschema 4.0.0
@@ -159,6 +166,7 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
 
