@@ -30,7 +30,9 @@ os_map = {
      "windows": "Windows",
      "linux": "Linux",
      "lin": "Linux",
-     "win": "Windows"
+     "win": "Windows",
+     "l": "Linux",
+     "w": "Windows"
 }
 
 def get_user_input():
