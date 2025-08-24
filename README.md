@@ -40,8 +40,9 @@ JB_Python_Project/
 ## Requirements
 
 ### Python Dependencies
-- Python 3.9+
-- `jsonschema>=4.0.0` (install via `pip install -r requirements.txt`)
+- Python 3.13.5
+- jsonschema 4.0.0
+- (install via `pip install -r requirements.txt`)
 
 ### System-Level Requirements
 The following are required depending on your operating system:
@@ -158,6 +159,7 @@ No other external packages are required. Logging is built-in Python library.
 ---
 
 **Note:** This project is for educational and simulation purposes only. No real virtual machines are provisioned.
+
 
 
 
