@@ -106,7 +106,7 @@ python infra_simulation.py
 
 1. **Create Virtual Machines:**
 
-   * Enter VM name, OS (`Ubuntu` or `CentOS`), CPU (e.g., `2vCPU`), and RAM (e.g., `4GB`).
+   * Enter VM name, OS (`Ubuntu` or `CentOS` or `Windows` or `Linux`), CPU (e.g., `2.0`), and RAM (e.g., `4.0`).
    * Type `done` to finish creating machines.
 
 2. **Configuration Management:**
